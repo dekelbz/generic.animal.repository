@@ -1,6 +1,6 @@
 package com.dekelbz.kafka.mongo.listener;
 
-import com.dekelbz.kafka.mongo.dao.RedisDao;
+import com.dekelbz.kafka.mongo.dao.AnimalDao;
 import com.dekelbz.kafka.mongo.entity.Animal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AnimalListener {
 
-    private final RedisDao<Animal> animalDao;
+    private final AnimalDao animalDao;
     private final KafkaTemplate<String, Animal> kafkaTemplate;
 
     @KafkaListener(topics = "animal-save")

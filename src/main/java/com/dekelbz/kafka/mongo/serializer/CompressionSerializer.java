@@ -1,6 +1,5 @@
 package com.dekelbz.kafka.mongo.serializer;
 
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.data.redis.serializer.RedisSerializer;
@@ -9,7 +8,6 @@ import org.xerial.snappy.Snappy;
 
 import java.util.Objects;
 
-@Getter
 @RequiredArgsConstructor
 public class CompressionSerializer<T> implements RedisSerializer<T> {
 

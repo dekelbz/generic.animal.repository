@@ -4,6 +4,6 @@ import com.dekelbz.kafka.mongo.entity.Animal;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository("secondLevel")
+@Repository
 public interface AnimalMongoRepository extends MongoRepository<Animal, Long> {
 }
